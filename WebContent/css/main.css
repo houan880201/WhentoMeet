@@ -38,6 +38,14 @@
   animation-delay: 2s;
 }
 
+.validation-err {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
 @keyframes flip_in {
   0% {
     transform: rotateY(90deg)

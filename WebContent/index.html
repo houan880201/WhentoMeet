@@ -6,9 +6,11 @@
     <meta name="author" content="Triple C">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhentoMeet</title>
+    <script src="script/createMeeting.js"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <!--
     <div id="logo-animation">
         <svg width="300" height="300" id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.2 464.21">
             <defs>
@@ -51,4 +53,86 @@
                 transform="translate(-427.9 -280.9)" />
         </svg>
     </div>
+    -->
+    <form id="newMeeting" action="createMeeting" method="POST">
+            Event Name:
+            <input type="text" id="eventName" name="eventName" value="" placeholder="New Event Name">
+            <span class="validation-err hidden">Please enter an event name. </span>
+            <br>
+            Event Description:
+            <input type="text" name="eventDescription" value="" placeholder="Optional Description">
+            <br>
+            Days of the Week:
+            <input type="checkbox" name="daysOfTheWeek" value="0">Sunday</input>
+            <input type="checkbox" name="daysOfTheWeek" value="1">Monday</input>
+            <input type="checkbox" name="daysOfTheWeek" value="2">Tuesday</input>
+            <input type="checkbox" name="daysOfTheWeek" value="3">Wednesday</input>
+            <input type="checkbox" name="daysOfTheWeek" value="4">Thursday</input>
+            <input type="checkbox" name="daysOfTheWeek" value="5">Friday</input>
+            <input type="checkbox" name="daysOfTheWeek" value="6">Saturday</input>
+            <span class="validation-err hidden">Please select days of the week. </span>
+            <br>
+            Start Time:
+            <select id="startTime" name="startTime">
+                <option value="0">Midnight</option>
+                <option value="1">1 am</option>
+                <option value="2">2 am</option>
+                <option value="3">3 am</option>
+                <option value="4">4 am</option>
+                <option value="5">5 am</option>
+                <option value="6">6 am</option>
+                <option value="7">7 am</option>
+                <option value="8">8 am</option>
+                <option value="9" selected>9 am</option>
+                <option value="10">10 am</option>
+                <option value="11">11 am</option>
+                <option value="12">12 pm</option>
+                <option value="13">1 pm</option>
+                <option value="14">2 pm</option>
+                <option value="15">3 pm</option>
+                <option value="16">4 pm</option>
+                <option value="17">5 pm</option>
+                <option value="18">6 pm</option>
+                <option value="19">7 pm</option>
+                <option value="20">8 pm</option>
+                <option value="21">9 pm</option>
+                <option value="22">10 pm</option>
+                <option value="23">11 pm</option>
+                <option value="24">Midnight</option>
+            </select>
+            <span class="validation-err hidden">Please select a valid start time. </span>
+            <br>
+            End Time:
+            <select id="endTime" name="endTime">
+                <option value="0">Midnight</option>
+                <option value="1">1 am</option>
+                <option value="2">2 am</option>
+                <option value="3">3 am</option>
+                <option value="4">4 am</option>
+                <option value="5">5 am</option>
+                <option value="6">6 am</option>
+                <option value="7">7 am</option>
+                <option value="8">8 am</option>
+                <option value="9">9 am</option>
+                <option value="10">10 am</option>
+                <option value="11">11 am</option>
+                <option value="12">12 pm</option>
+                <option value="13">1 pm</option>
+                <option value="14">2 pm</option>
+                <option value="15">3 pm</option>
+                <option value="16">4 pm</option>
+                <option value="17" selected>5 pm</option>
+                <option value="18">6 pm</option>
+                <option value="19">7 pm</option>
+                <option value="20">8 pm</option>
+                <option value="21">9 pm</option>
+                <option value="22">10 pm</option>
+                <option value="23">11 pm</option>
+                <option value="24">Midnight</option>
+            </select>
+            <span class="validation-err hidden">Please select a valid end time that is later than start time. </span>
+            <br>
+            <button type="button" onclick="createNewMeeting()">Submit</button>
+            <input type="submit" value="Submit">
+    </form>
 </body>
